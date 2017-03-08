@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Feiras</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+    <div #map id="map"></div>
+    <ion-card-content *ngIf="infoFeira">
+      <ion-card-title>
+        {{infoFeira.nome}}
+        </ion-card-title>
+      <p>
+        {{infoFeira.descricao}}
+      </p>
+      <button (click)="navigate()" ion-button color="primary" outline small style="float: right; margin-bottom: 15px; margin-top: 10px;">Saiba mais</button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

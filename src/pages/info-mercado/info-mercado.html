@@ -1,0 +1,48 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{infoMercado.nome}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-content>
+      <h2><b>{{infoMercado.nome}}</b></h2>
+      <p>{{infoMercado.descricao}}</p>
+    </ion-card-content>
+
+    <ion-card-content>
+      <p><ion-icon name="pin" item-left></ion-icon>&nbsp; {{infoMercado.bairro}}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+
+    <ion-card-header>
+    Comentários
+    </ion-card-header>
+
+    <ion-card-content>
+      <label>Nome</label>
+      <input type="text" class="form-control" [(ngModel)]="comentario.nome">
+      <br>
+      <label>Comentário</label>
+      <textarea style="resize: none;" class="form-control" [(ngModel)]="comentario.comentario"></textarea>
+      <button ion-button small style="margin-top: 8px; width: 100%;" (click)="salvarComentarioMercado()">Enviar</button>
+    </ion-card-content>
+
+    <ion-list>
+      <ion-item *ngFor="let c of comentarios">
+        <ion-avatar item-left>
+          <img src="http://ionicframework.com/dist/preview-app/www/assets/img/avatar-ts-buzz.png">
+        </ion-avatar>
+        <h2>{{c.nomeDaPessoa}}</h2>
+        <p>{{c.comentario}}</p>
+        <p style="float: right; color: dodgerblue; margin-top: 7px; font-size: 1.2rem;">{{c.data | date:'dd/MM/yyyy HH:mm'}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>

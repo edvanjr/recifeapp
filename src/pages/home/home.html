@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Conheça o Recife</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background-color: #ecf0f5;;">
+  <ion-card (click)="navigate('museus')">
+    <ion-item>
+      <ion-icon name="home" item-left large style="color: red;"></ion-icon>
+      <h2>Museus</h2>
+      <p>Museus da cidade do Recife, com sua descrição e localização.</p>
+    </ion-item>
+  </ion-card>
+
+  <ion-card (click)="navigate('shoppings')">
+    <ion-item>
+      <ion-icon name="cube" item-left large style="color: blue;"></ion-icon>
+      <h2>Shoppings</h2>
+      <p>Shoppings da cidade do Recife com as suas devidas localizações e informações.</p>
+    </ion-item>
+  </ion-card>
+
+  <ion-card (click)="navigate('mercados')">
+    <ion-item>
+      <ion-icon name="cart" item-left large style="color: green;"></ion-icon>
+      <h2>Mercados</h2>
+      <p>Mercados Públicos da cidade de Recife com suas informações, descrições e localizações.</p>
+    </ion-item>
+  </ion-card>
+
+  <ion-card (click)="navigate('feiras')">
+    <ion-item>
+      <ion-icon name="briefcase" item-left large style="color: #f39c12 ;"></ion-icon>
+      <h2>Feiras</h2>
+      <p>Feiras com suas localizações e horário que ocorrem.</p>
+    </ion-item>
+  </ion-card>
+
+  <ion-card (click)="navigate('teatros')">
+    <ion-item>
+      <ion-icon name="microphone" item-left large style="color: purple;"></ion-icon>
+      <h2>Teatros</h2>
+      <p>Teatros com suas localizações e descrições.</p>
+    </ion-item>
+  </ion-card>
+
+  <ion-card (click)="navigate('pontes')">
+    <ion-item>
+      <ion-icon name="map" item-left large style="color: deepskyblue;"></ion-icon>
+      <h2>Pontes</h2>
+      <p>Informações sobre as famosas pontes da cidade de Recife com suas localizações e descrições.</p>
+    </ion-item>
+  </ion-card>
+  
+</ion-content>
